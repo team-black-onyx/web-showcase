@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{DESCRIPTION}}">
+  <meta name="theme-color" content="#0B0D0F">
+  <title>{{TITLE}}</title>
+  <script>try{const t=localStorage.getItem('layercraft-theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t;else if(matchMedia('(prefers-color-scheme: light)').matches)document.documentElement.dataset.theme='light'}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ASSET_PREFIX}}assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="header-inner wrap">
+    <a class="wordmark" href="{{HOME}}" aria-label="Layercraft home"><span class="wordmark-icon" aria-hidden="true"><i></i><i></i><i></i></span>Layercraft</a>
+    <nav class="main-nav" id="navigation" aria-label="Main navigation"><a href="{{HOME}}#experiments" {{ACTIVE_EXPERIMENTS}}>Experiments</a><a href="{{HOME}}#about">About</a>{{GITHUB_NAV}}</nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch theme"><span class="theme-icon" aria-hidden="true">☼</span></button>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Open navigation"><span></span><span></span></button>
+  </div></header>
+  {{BODY}}
+  <footer class="site-footer"><div class="wrap footer-inner"><a class="wordmark" href="{{HOME}}"><span class="wordmark-icon" aria-hidden="true"><i></i><i></i><i></i></span>Layercraft</a><p>Experiments at the layers beneath intelligence.</p>{{GITHUB_FOOTER}}<span class="mono footer-note">AN OPEN EXPERIMENTAL RECORD</span></div></footer>
+  <script src="{{ASSET_PREFIX}}assets/site.js" defer></script>
+</body>
+</html>
